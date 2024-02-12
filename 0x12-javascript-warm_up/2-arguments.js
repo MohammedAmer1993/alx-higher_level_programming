@@ -1,7 +1,6 @@
 #!/usr/bin/node
 
-import { argv } from 'node:process';
-
+const { argv } = require('node:process');
 
 if (argv[2] !== undefined && argv[3] !== undefined) {
   console.log('Arguments found');
