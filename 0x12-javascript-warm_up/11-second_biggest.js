@@ -12,11 +12,11 @@ if (x === undefined || y === undefined) {
     y = tmp;
   }
   let i = 0;
-  while (process.argv[i + 3]) {
-    if (x < process.argv[i + 3]) {
-      x = process.argv[i + 3];
-    } else if (y < process.argv[i + 3]) {
-      y = process.argv[i + 3];
+  while (process.argv[i + 4]) {
+    if (x < process.argv[i + 4]) {
+      x = process.argv[i + 4];
+    } else if (y < process.argv[i + 4]) {
+      y = process.argv[i + 4];
     }
     i++;
   }
