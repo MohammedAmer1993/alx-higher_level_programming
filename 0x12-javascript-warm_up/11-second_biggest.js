@@ -1,7 +1,21 @@
 #!/usr/bin/node
+let x = process.argv[2];
+let y = process.argv[3];
+let tmp = 0;
 
-if (process.argv[2] === undefined || process.argv[3] === undefined) {
+if (x === undefined || y === undefined) {
   console.log('NaN');
 } else {
-  console.log(process.argv[3]);
+  let i = 0;
+  while (process.argv[i + 3]) {
+    if (x < process.argv[i + 3]) {
+      tmp = x;
+      x = process.argv[i + 3];
+      if (tmp > y) {
+        y = tmp;
+      }
+    }
+    i++;
+  }
+  console.log(y);
 }
