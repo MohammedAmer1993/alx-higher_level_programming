@@ -1,6 +1,8 @@
 #!/usr/bin/node
-const logMe = require('./9-logme').logMe;
+const Rectangle = require('./3-rectangle');
 
-logMe("Hello");
-logMe("Best");
-logMe("School");
+const r1 = new Rectangle(2, 3);
+r1.print();
+
+const r2 = new Rectangle(10, 5);
+r2.print();
