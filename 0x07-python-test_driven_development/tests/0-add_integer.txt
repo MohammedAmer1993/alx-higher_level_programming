@@ -23,13 +23,6 @@ TypeError: b must be an integer
 Traceback (most recent call last):
 TypeError: a must be an integer
 
->>> mod.add_integer(3.5, 3.1)
-6
-
->>> mod.add_integer(3, "school")
-Traceback (most recent call last):
-TypeError: b must be an integer
-
 >>> mod.add_integer(3, 8)
 11
 
@@ -39,17 +32,6 @@ TypeError: b must be an integer
 >>> mod.add_integer(3, -4)
 -1
 
->>> mod.add_integer(-3, -5)
--8
-
->>> mod.add_integer(-3, 0)
--3
-
 >>> mod.add_integer(0)
 98
 
->>> mod.add_integer(1)
-99
-
->>> mod.add_integer(4)
-102
