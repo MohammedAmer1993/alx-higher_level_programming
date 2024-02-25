@@ -1,7 +1,7 @@
 TEST CASES FOR MODULE  0-ADD_INTGERS
 ++++++++++++++++++++++++++++++++++++
 
-in this cases I used __import__ to git around the name of module as it starts with number
+in this cases I used __import__ to get around the name of module as it starts with number
 
 edge cases:
 
