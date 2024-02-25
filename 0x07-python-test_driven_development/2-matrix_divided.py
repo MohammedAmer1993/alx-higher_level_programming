@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""Module for matrix divide all of tests are found in /tests"""
+"""Module for matrix divide all of tests are found in /tests
+this module accept a matrix of int or floats and divid it by a number.
+you should provide matrix in the right form and a dividor
+if you didn't provide argument in the right form exception will be raised.
+the dividor mustn't be zero """
 
 
 def matrix_divided(matrix, div):
