@@ -14,10 +14,10 @@ def matrix_divided(matrix, div):
     Return:
         a new matrix
     """
-    if type(matrix) is not list:
+    if type(matrix) is not list or len(matrix) == 0:
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats")
-    elif type(matrix[0]) is not list:
+    elif type(matrix[0]) is not list or len(matrix[0] == 0):
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats")
     number_of_elemnts = len(matrix[0])
