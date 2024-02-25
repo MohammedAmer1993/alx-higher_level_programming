@@ -27,12 +27,12 @@ def matrix_divided(matrix, div):
                 "matrix must be a matrix (list of lists) of integers/floats")
         elif len(i) != number_of_elemnts:
             raise TypeError("Each row of the matrix must have the same size")
-    for i in matrix:
         for m in i:
             if type(m) is not int and type(m) is not float:
                 raise TypeError(
                     "matrix must be a matrix "
                     + "(list of lists) of integers/floats")
+
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
     if div == 0:
