@@ -1,5 +1,10 @@
 TEST CASES FOR 2-MATRIX_DIVIDED.PY 
 
+this is the text file to test ``matrix_divided``
+this file should alaways exict in tests dirctory which is in 
+the same dirctory as the main module
+test cases is written by Mohammed Amer
+
 Edge cases:
 
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
