@@ -1,29 +1,44 @@
-#doctest for 0-add_intger module
-++++++++++++++++++++++++++++++++++++++++++++
+TEST CASES FOR MODULE  0-ADD_INTGERS
+++++++++++++++++++++++++++++++++++++
 
-endge cases:
+in this cases I used __import__ to git around the name of module as it starts with number
 
+edge cases:
 
->>>from 0-add_intger import add_integer
->>>add_integer(4)
-102
->>>add_integer()
+>>> mod = __import__("0-add_integer")
+
+>>> mod.add_integer()
+Traceback (most recent call last):
 TypeError: add_integer() missing 1 required positional argument: 'a'
->>>add_integer("a")
+
+>>> mod.add_integer("a")
+Traceback (most recent call last):
 TypeError: a must be an integer
->>>add_integer(3, 'b')
+
+>>> mod.add_integer(3, 'b')
+Traceback (most recent call last):
 TypeError: b must be an integer
->>>add_integer(3, 8)
+
+>>> mod.add_integer(3, 8)
 11
->>>add_integer(3.3, 8)
+
+>>> mod.add_integer(3.3, 8)
 11
->>>add_integer(3, -4)
+
+>>> mod.add_integer(3, -4)
 -1
->>>add_integer(-3, -5)
+
+>>> mod.add_integer(-3, -5)
 -8
->>>add_integer(-3, 0)
+
+>>> mod.add_integer(-3, 0)
 -3
->>>add_integer(0)
+
+>>> mod.add_integer(0)
 98
->>>add_integer(1)
+
+>>> mod.add_integer(1)
 99
+
+>>> mod.add_integer(4)
+102
