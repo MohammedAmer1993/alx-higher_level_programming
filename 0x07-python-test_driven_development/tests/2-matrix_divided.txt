@@ -40,6 +40,10 @@ TypeError: Each row of the matrix must have the same size
 Traceback (most recent call last):
 TypeError: Each row of the matrix must have the same size
 
+>>> matrix_divided([[2, 4], [4, 8]], "s")
+Traceback (most recent call last):
+TypeError: div must be a number
+
 >>> matrix_divided([[2, 4], [4, "s"]], 5)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
