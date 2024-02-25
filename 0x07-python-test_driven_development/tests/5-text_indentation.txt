@@ -1,0 +1,35 @@
+TEST CASES FOR MODULE 5-text_indentation
+++++++++++++++++++++++++++++++++++++++++
+
+this is test case suit for function text_indentation() in module 
+5-text_indentation 
+
+EDGE CASES:
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+
+
+>>> text_indentation(4)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+
+>>> text_indentation("")
+<BLANKLINE>
+
+>>> text_indentation("text")
+text
+
+>>> text_indentation("hello. my name is mohammed and you?")
+hello.
+my name is mohammed and you?
+
+>>> text_indentation("Hello, ahmed what ary you doing? I'm just playin")
+Hello, ahmed what ary you doing?
+I'm just playin
+
