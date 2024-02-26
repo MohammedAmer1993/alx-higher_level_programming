@@ -36,6 +36,3 @@ def text_indentation(text):
         print(text, end="")
     else:
         print(mystring, end="")
-
-
-text_indentation("hello.world")
