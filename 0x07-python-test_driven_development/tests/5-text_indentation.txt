@@ -20,16 +20,26 @@ TypeError: text must be a string
 
 
 >>> text_indentation("")
-<BLANKLINE>
 
 >>> text_indentation("text")
 text
 
 >>> text_indentation("hello. my name is mohammed and you?")
 hello.
+<BLANKLINE>
 my name is mohammed and you?
+<BLANKLINE>
 
 >>> text_indentation("Hello, ahmed what ary you doing? I'm just playin")
 Hello, ahmed what ary you doing?
+<BLANKLINE>
 I'm just playin
 
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John

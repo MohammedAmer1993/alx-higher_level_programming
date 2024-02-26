@@ -19,7 +19,7 @@ def text_indentation(text):
     while mov_in < the_length:
         flag = 1
         if text[mov_in] == "." or text[mov_in] == ":" or text[mov_in] == "?":
-            mystring = mystring + text[last_in:mov_in + 1] + "\n"
+            mystring = mystring + text[last_in:mov_in + 1] + "\n\n"
             last_in = mov_in
             while last_in + 1 < the_length and text[last_in + 1] == " ":
                 last_in += 1
@@ -31,7 +31,8 @@ def text_indentation(text):
 
     if last_in != the_length - 1:
         mystring = mystring + text[last_in:]
-    print(mystring, end="")
 
     if flag == 0:
-        print(text)
+        print(text, end="")
+    else:
+        print(mystring, end="")
