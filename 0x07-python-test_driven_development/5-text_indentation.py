@@ -23,7 +23,7 @@ def text_indentation(text):
             last_in = mov_in
             while last_in + 1 < the_length and text[last_in + 1] == " ":
                 last_in += 1
-            if last_in + 1 < the_length and text[last_in] == " ":
+            if last_in + 1 < the_length and text[last_in] in [" ", ":", ".", "?"]:
                 last_in += 1
             while mov_in + 1 < the_length and text[mov_in + 1] == " ":
                 mov_in += 1
@@ -36,3 +36,6 @@ def text_indentation(text):
         print(text, end="")
     else:
         print(mystring, end="")
+
+
+text_indentation("hello.world")
