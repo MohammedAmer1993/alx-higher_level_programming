@@ -6,4 +6,4 @@ import sys
 if __name__ == "__main__":
     val = {"email": sys.argv[2]}
     res = requests.post(sys.argv[1], data=val)
-    print(f"Your email is: {res.text}")
+    print(res.text)
