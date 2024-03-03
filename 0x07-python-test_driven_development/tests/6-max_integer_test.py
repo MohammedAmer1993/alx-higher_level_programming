@@ -21,6 +21,12 @@ class testmaxint(unittest.TestCase):
     def test_num3(self):
         self.assertEqual(max_integer([2.32, -8, 5.14, -66, 3]), 5.14)
 
+    def test_num(self):
+        self.assertEqual(max_integer([32, 8, 7, 6, 3]), 32)
+
+    def test_num(self):
+        self.assertEqual(max_integer([2, 8, 7, 6, 67]), 67)
+
     def test_elem(self):
         self.assertRaises(TypeError, max_integer, [2, "vo", True, [3]])
 
