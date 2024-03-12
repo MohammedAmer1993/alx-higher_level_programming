@@ -48,5 +48,4 @@ class test_rect(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    print(sys.path)
     unittest.main()
