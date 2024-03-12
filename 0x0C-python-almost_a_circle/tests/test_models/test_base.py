@@ -2,13 +2,13 @@
 """test module for base class"""
 
 import unittest
-from models import base
+from models.base import Base
 
 
 class test_base(unittest.TestCase):
 
     def test_id(self):
-        testobj = base(32)
+        testobj = Base(32)
         self.assertEqual(testobj.id, 32)
 
 
