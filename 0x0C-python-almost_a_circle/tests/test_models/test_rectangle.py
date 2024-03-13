@@ -114,15 +114,16 @@ class test_rect(unittest.TestCase):
         test = Rectangle(4, 3)
         self.assertEqual(test.area(), 12)
 
-    def test_display(self):
-        test = Rectangle(2, 3)
-        self.assertEqual(test.display(), "##\n##\n##\n")
-
     def test_str(self):
         test = Rectangle(3, 4, 1, 2, 98)
         msg = "[Rectangle] (98) 1/2 - 3/4"
 
         self.assertEqual(test.__str__(), msg)
+
+    def test_display(self):
+        test = Rectangle(3, 2, 1, 3)
+        msg = "\n\n\n ###\n ###\n"
+        self.assertEqual(test.display(), msg)
 
 
 if __name__ == "__main__":

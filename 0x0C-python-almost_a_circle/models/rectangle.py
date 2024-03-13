@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Module for class rectangle that inherts from base class"""
 
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -100,8 +100,9 @@ class Rectangle(Base):
             the shape of Rect
         """
         con = ""
+        con2 = ""
         for i in range(self.__y):
-            print()
+            con2 += "\n"
         for i in range(self.__x):
             con += " "
         dis = ""
@@ -110,6 +111,7 @@ class Rectangle(Base):
             for z in range(self.__width):
                 dis += "#"
             dis += "\n"
+        dis = con2 + dis
         print(dis, end="")
         return dis
 
