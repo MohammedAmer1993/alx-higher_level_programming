@@ -124,3 +124,13 @@ class Rectangle(Base):
         msg = f"[Rectangle] ({self.id}) {self.__x}/{self.__y} -"
         msg = msg + f" {self.__width}/{self.__height}"
         return msg
+
+    def update(self, *args):
+        """Update the instance with new data
+        Args:
+            args: variadic number of posintional argument
+        """
+        mylist = ["id", "_Rectangle__width",
+                  "_Rectangle__height", "_Rectangle__x", "_Rectangle__y"]
+        for i, k in enumerate(args):
+            setattr(self, mylist[i], k)
