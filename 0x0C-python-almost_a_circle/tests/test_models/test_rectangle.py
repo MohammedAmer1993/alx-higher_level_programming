@@ -46,6 +46,70 @@ class test_rect(unittest.TestCase):
         res = test_rect.testobj.y
         self.assertEqual(res, 6)
 
+    def test_width_type(self):
+        with self.assertRaises(TypeError):
+            test_rect.testobj.width = "hi"
+
+    def test_width_type_inst(self):
+        with self.assertRaises(TypeError):
+            test = Rectangle("str", 5, 5, 5)
+
+    def test_width_value(self):
+        with self.assertRaises(ValueError):
+            test_rect.testobj.width = -6
+
+    def test_width_value_inst(self):
+        with self.assertRaises(ValueError):
+            test = Rectangle(-5, 5, 5, 5)
+
+    def test_height_type(self):
+        with self.assertRaises(TypeError):
+            test_rect.testobj.height = "hi"
+
+    def test_height_type_inst(self):
+        with self.assertRaises(TypeError):
+            test = Rectangle(5, "str", 5, 5)
+
+    def test_height_value(self):
+        with self.assertRaises(ValueError):
+            test_rect.testobj.height = -6
+
+    def test_height_value_inst(self):
+        with self.assertRaises(ValueError):
+            test = Rectangle(5, -5, 5, 5)
+
+    def test_x_type(self):
+        with self.assertRaises(TypeError):
+            test_rect.testobj.x = "hi"
+
+    def test_x_type_inst(self):
+        with self.assertRaises(TypeError):
+            test = Rectangle(5, 5, "str", 5)
+
+    def test_x_value(self):
+        with self.assertRaises(ValueError):
+            test_rect.testobj.x = -3
+
+    def test_x_value_inst(self):
+        with self.assertRaises(ValueError):
+            test = Rectangle(5, 5, -5, 5)
+
+    def test_y_type(self):
+        with self.assertRaises(TypeError):
+            test_rect.testobj.y = "hi"
+
+    def test_y_type_inst(self):
+        with self.assertRaises(TypeError):
+            test = Rectangle(5, 5, 5, "str")
+
+    def test_y_value(self):
+        with self.assertRaises(ValueError):
+            test_rect.testobj.y = -3
+
+    def test_x_value_inst(self):
+        with self.assertRaises(ValueError):
+            test = Rectangle(5, 5, 5, -5)
+
 
 if __name__ == "__main__":
     unittest.main()
