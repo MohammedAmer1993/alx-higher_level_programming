@@ -94,6 +94,11 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        """Display function to draw a rect using #
+
+        Return:
+            the shape of Rect
+        """
         dis = ""
         for i in range(self.__height):
             for z in range(self.__width):
