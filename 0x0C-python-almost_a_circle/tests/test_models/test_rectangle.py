@@ -60,7 +60,7 @@ class test_rect(unittest.TestCase):
 
     def test_width_value_inst(self):
         with self.assertRaises(ValueError):
-            test = Rectangle(-5, 5, 5, 5)
+            test = Rectangle(-5, 5)
 
     def test_height_type(self):
         with self.assertRaises(TypeError):
@@ -76,7 +76,7 @@ class test_rect(unittest.TestCase):
 
     def test_height_value_inst(self):
         with self.assertRaises(ValueError):
-            test = Rectangle(5, -5, 5, 5)
+            test = Rectangle(5, -5)
 
     def test_x_type(self):
         with self.assertRaises(TypeError):
