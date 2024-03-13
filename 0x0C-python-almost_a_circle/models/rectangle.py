@@ -106,3 +106,11 @@ class Rectangle(Base):
             dis += "\n"
         print(dis, end="")
         return dis
+
+    def __str__(self):
+        """the string representation of Rect class
+
+        Return:
+            information of the class as string
+        """
+        return f"[Rectangle] ({self.id}) {self.__x/self.__y} - {self.__width/self.__height})"
