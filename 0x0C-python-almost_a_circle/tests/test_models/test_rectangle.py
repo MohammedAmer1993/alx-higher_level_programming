@@ -114,6 +114,10 @@ class test_rect(unittest.TestCase):
         test = Rectangle(4, 3)
         self.assertEqual(test.area(), 12)
 
+    def test_display(self):
+        test = Rectangle(2, 3)
+        self.assertEqual(test.display(), "##\n##\n##\n")
+
 
 if __name__ == "__main__":
     unittest.main()

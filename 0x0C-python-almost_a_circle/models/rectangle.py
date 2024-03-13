@@ -92,3 +92,12 @@ class Rectangle(Base):
     def area(self):
         """Area method to return the area of Rect"""
         return self.__width * self.__height
+
+    def display(self):
+        dis = ""
+        for i in range(self.__height):
+            for z in range(self.__width):
+                dis += "#"
+            dis += "\n"
+        print(dis, end="")
+        return dis
