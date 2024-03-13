@@ -98,10 +98,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        """setter for __y
-        Args:
-            value (int): the new valu
-        """
+
         if type(value) is not int:
             raise TypeError("y must be an integer")
         elif value < 0:
@@ -110,4 +107,5 @@ class Rectangle(Base):
             self.__y = value
 
     def area(self):
+        """Area method to return the area of Rect"""
         return self.__width * self.__height
