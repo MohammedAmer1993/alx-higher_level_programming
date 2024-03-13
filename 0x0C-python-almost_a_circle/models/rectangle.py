@@ -30,11 +30,12 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         if y < 0:
             raise ValueError("y must be >= 0")
-        super().__init__(id)
-        self.__x = x
-        self.__y = y
-        self.__width = width
-        self.__height = height
+        else:
+            super().__init__(id)
+            self.__x = x
+            self.__y = y
+            self.__width = width
+            self.__height = height
 
     @property
     def width(self):
