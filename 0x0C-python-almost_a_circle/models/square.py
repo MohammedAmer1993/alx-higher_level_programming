@@ -50,3 +50,12 @@ class Square(Rectangle):
             super().update(*args)
         else:
             super().update(**kwargs)
+
+    def to_dictionary(self):
+        """Dictionary of an instance"""
+        mydict = {}
+        mydict["id"] = self.id
+        mydict["x"] = self.x
+        mydict["size"] = self.size
+        mydict["y"] = self.y
+        return mydict

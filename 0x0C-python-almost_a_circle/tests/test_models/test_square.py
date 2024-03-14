@@ -48,6 +48,12 @@ class test_square(test_rect):
         msg = "[Square] (89) 2/2 - 32"
         self.assertEqual(test_square.testobj.__str__(), msg)
 
+    def test_dict_square(self):
+        test = Square(10, 2, 1, 100)
+        dict1 = test.to_dictionary()
+        dict2 = {'id': 100, 'x': 2, 'size': 10, 'y': 1}
+        self.assertEqual(dict1, dict2)
+
 
 if __name__ == "__main__":
     unittest.main()
