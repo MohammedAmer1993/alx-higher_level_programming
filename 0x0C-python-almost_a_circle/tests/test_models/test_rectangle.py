@@ -130,6 +130,11 @@ class test_rect(unittest.TestCase):
         msg = "[Rectangle] (89) 4/5 - 2/3"
         self.assertEqual(test_rect.testobj.__str__(), msg)
 
+    def test_update2(self):
+        test_rect.testobj.update(89, x=2, y=3, height=4, width=5)
+        msg = "[Rectangle] (89) 2/3 - 5/4"
+        self.assertEqual(test_rect.testobj.__str__(), msg)
+
 
 if __name__ == "__main__":
     unittest.main()

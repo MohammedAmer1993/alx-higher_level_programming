@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module for class rectangle that inherts from base class"""
 
+
 from models.base import Base
 
 
@@ -125,7 +126,7 @@ class Rectangle(Base):
         msg = msg + f" {self.__width}/{self.__height}"
         return msg
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update the instance with new data
         Args:
             args: variadic number of posintional argument
@@ -134,3 +135,9 @@ class Rectangle(Base):
                   "_Rectangle__height", "_Rectangle__x", "_Rectangle__y"]
         for i, k in enumerate(args):
             setattr(self, mylist[i], k)
+        for c in kwargs:
+            if c in mylist:
+                setattr(self, c, kwargs[c])
+            else:
+                tmp = "_Rectangle__" + c
+                setattr(self, tmp, kwargs[c])
