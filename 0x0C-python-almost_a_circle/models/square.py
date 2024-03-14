@@ -27,11 +27,17 @@ class Square(Rectangle):
         self.width = value
 
     def __str__(self):
+        """the string representation in the class"""
         msg = f"[Square] ({self.id}) {self.x}/{self.y} -"
         msg = msg + f" {self.width}"
         return msg
 
     def update(self, *args, **kwargs):
+        """update method 
+        Args:
+            args: tuple of positional arguments
+            kwargs: dictionary of keyword arguments
+        """
         args = list(args)
         if len(args) >= 2:
             args.insert(2, args[1])
