@@ -14,7 +14,10 @@ class Rectangle(Base):
         Args:
             width (int): the width of rectangle
             height (int): the height of rectangle
-            x (int): the """
+            x (int): the X for class (just requierd)
+            y (int): the Y for class (just requierd)
+            id (ind): the id of Rect
+        """
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if type(height) is not int:

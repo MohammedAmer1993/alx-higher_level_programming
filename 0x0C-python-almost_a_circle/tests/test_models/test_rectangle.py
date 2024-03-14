@@ -6,13 +6,7 @@ from models.rectangle import Rectangle
 
 class test_rect(unittest.TestCase):
 
-    @classmethod
-    def setUpClass(cls):
-        cls.testobj = Rectangle(20, 10, 0, 0)
-
-    @classmethod
-    def tearDownClass(cls):
-        del cls.testobj
+    testobj = Rectangle(20, 10, 0, 0)
 
     def test_getter_width(self):
         self.assertEqual(self.testobj.width, 20)
