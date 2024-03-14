@@ -26,6 +26,10 @@ class test_square(test_rect):
         msg = "[Square] (98) 0/0 - 5"
         self.assertEqual(test.__str__(), msg)
 
+    def test_size_getter(self):
+        test_square.testobj.size = 30
+        self.assertEqual(test_square.testobj.size, 30)
+
 
 if __name__ == "__main__":
     unittest.main()
