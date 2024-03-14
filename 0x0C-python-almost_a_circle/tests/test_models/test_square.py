@@ -30,6 +30,14 @@ class test_square(test_rect):
         test_square.testobj.size = 30
         self.assertEqual(test_square.testobj.size, 30)
 
+    def test_size_value(self):
+        with self.assertRaises(ValueError):
+            test_square.testobj.size = -3
+
+    def test_size_type(self):
+        with self.assertRaises(TypeError):
+            test_square.testobj.size = "hi"
+
 
 if __name__ == "__main__":
     unittest.main()
