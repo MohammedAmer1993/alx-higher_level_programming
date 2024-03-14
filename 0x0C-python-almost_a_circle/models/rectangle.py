@@ -140,3 +140,13 @@ class Rectangle(Base):
             setattr(self, mylist[i], k)
         for c in kwargs:
             setattr(self, c, kwargs[c])
+
+    def to_dictionary(self):
+        """Dictionary of an instance"""
+        mydict = {}
+        mydict["x"] = self.x
+        mydict["y"] = self.y
+        mydict["id"] = self.id
+        mydict["height"] = self.height
+        mydict["width"] = self.width
+        return mydict

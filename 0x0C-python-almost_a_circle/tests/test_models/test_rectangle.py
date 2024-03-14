@@ -129,6 +129,12 @@ class test_rect(unittest.TestCase):
         msg = "[Rectangle] (89) 2/3 - 5/4"
         self.assertEqual(test_rect.testobj.__str__(), msg)
 
+    def test_dict(self):
+        test = Rectangle(10, 2, 1, 9, 100)
+        dict1 = test.to_dictionary()
+        dict2 = {'x': 1, 'y': 9, 'id': 100, 'height': 2, 'width': 10}
+        self.assertEqual(dict1, dict2)
+
 
 if __name__ == "__main__":
     unittest.main()
