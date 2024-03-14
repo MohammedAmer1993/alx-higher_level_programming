@@ -33,7 +33,7 @@ class Square(Rectangle):
         return msg
 
     def update(self, *args, **kwargs):
-        """update method 
+        """update method
         Args:
             args: tuple of positional arguments
             kwargs: dictionary of keyword arguments
