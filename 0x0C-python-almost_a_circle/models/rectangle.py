@@ -134,13 +134,9 @@ class Rectangle(Base):
         Args:
             args: variadic number of posintional argument
         """
-        mylist = ["id", "_Rectangle__width",
-                  "_Rectangle__height", "_Rectangle__x", "_Rectangle__y"]
+        mylist = ["id", "width",
+                  "height", "x", "y"]
         for i, k in enumerate(args):
             setattr(self, mylist[i], k)
         for c in kwargs:
-            if c in mylist:
-                setattr(self, c, kwargs[c])
-            else:
-                tmp = "_Rectangle__" + c
-                setattr(self, tmp, kwargs[c])
+            setattr(self, c, kwargs[c])

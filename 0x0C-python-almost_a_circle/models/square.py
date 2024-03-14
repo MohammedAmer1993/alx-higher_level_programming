@@ -30,3 +30,17 @@ class Square(Rectangle):
         msg = f"[Square] ({self.id}) {self.x}/{self.y} -"
         msg = msg + f" {self.width}"
         return msg
+
+    def update(self, *args, **kwargs):
+        args = list(args)
+        if len(args) >= 2:
+            args.insert(2, args[1])
+        if "size" in kwargs.keys():
+            tmp = kwargs["size"]
+            kwargs.pop('size')
+            kwargs["width"] = tmp
+            kwargs["height"] = tmp
+        if args:
+            super().update(*args)
+        else:
+            super().update(**kwargs)

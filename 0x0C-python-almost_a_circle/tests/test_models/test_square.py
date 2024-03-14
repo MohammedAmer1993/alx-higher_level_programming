@@ -38,6 +38,16 @@ class test_square(test_rect):
         with self.assertRaises(TypeError):
             test_square.testobj.size = "hi"
 
+    def test_update_square(self):
+        test_square.testobj.update(1, 2, 3, 4)
+        msg = "[Square] (1) 3/4 - 2"
+        self.assertEqual(test_square.testobj.__str__(), msg)
+
+    def test_update2_Square(self):
+        test_square.testobj.update(id=89, x=2, y=2, size=32)
+        msg = "[Square] (89) 2/2 - 32"
+        self.assertEqual(test_square.testobj.__str__(), msg)
+
 
 if __name__ == "__main__":
     unittest.main()
