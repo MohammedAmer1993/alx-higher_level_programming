@@ -75,6 +75,6 @@ class Base:
             dictionary (dict): varible number of key-value pairs
         Return: the instance of the class which inherited from base
         """
-        dummy = cls(4, 4, 4, 4)
+        dummy = cls(4, 4)
         dummy.update(**dictionary)
         return dummy
