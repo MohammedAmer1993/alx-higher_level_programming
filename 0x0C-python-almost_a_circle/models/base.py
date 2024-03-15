@@ -76,5 +76,4 @@ class Base:
         Return: the instance of the class which inherited from base
         """
         dummy = cls(**dictionary)
-        # dummy.update(**dictionary)
         return dummy
