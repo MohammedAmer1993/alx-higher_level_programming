@@ -21,9 +21,6 @@ class Base:
         else:
             self.id = id
 
-    def to_dictionary(self):
-        return self.__dict__
-
     @staticmethod
     def to_json_string(list_dictionaries):
         """static method that returns the JSON str of list of dictionaries
