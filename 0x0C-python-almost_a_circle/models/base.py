@@ -39,7 +39,7 @@ class Base:
 
         if list_objs is None:
             with open(filename, "w") as file:
-                file.write()
+                file.write("")
 
         else:
             mylist = []
