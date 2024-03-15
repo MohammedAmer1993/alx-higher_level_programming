@@ -30,6 +30,7 @@ class Base:
 
         Args:
             list_dictionaries (list[dict]): the list to be transformed
+        Return: json string
         """
         if not list_dictionaries:
             return "[]"
@@ -62,6 +63,8 @@ class Base:
         """from_json_string turns json string into list of dict
         Args:
             json_string (str): the string to be transformed
+        Return: list of dictionaries
+
         """
         if not json_string:
             return []
