@@ -135,6 +135,13 @@ class test_rect(unittest.TestCase):
         dict2 = {'x': 1, 'y': 9, 'id': 100, 'height': 2, 'width': 10}
         self.assertEqual(dict1, dict2)
 
+    def test_to_json_str(self):
+        test = Rectangle(10, 2, 1, 9, 100)
+        dict1 = test.to_dictionary()
+        mylist = [dict1]
+        msg = r'[{"x": 1, "y": 9, "id": 100, "height": 2, "width": 10}]'
+        self.assertEqual(test.to_json_string(mylist), msg)
+
 
 if __name__ == "__main__":
     unittest.main()

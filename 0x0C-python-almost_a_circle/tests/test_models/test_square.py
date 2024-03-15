@@ -54,6 +54,13 @@ class test_square(test_rect):
         dict2 = {'id': 100, 'x': 2, 'size': 10, 'y': 1}
         self.assertEqual(dict1, dict2)
 
+    def test_to_json_str(self):
+        test = Square(10, 2, 1, 100)
+        mydict = test.to_dictionary()
+        mylist = [mydict]
+        msg = r'[{"id": 100, "x": 2, "size": 10, "y": 1}]'
+        self.assertEqual(test.to_json_string(mylist), msg)
+
 
 if __name__ == "__main__":
     unittest.main()

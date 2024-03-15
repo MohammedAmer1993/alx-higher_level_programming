@@ -11,6 +11,19 @@ class test_base(unittest.TestCase):
         testobj = Base(32)
         self.assertEqual(testobj.id, 32)
 
+    def test_to_json1(self):
+        self.assertEqual(Base.to_json_string([]), "[]")
+
+    def test_to_json2(self):
+        self.assertEqual(Base.to_json_string(None), "[]")
+
+    def test_to_json3(self):
+        dict1 = {"name": "Mohammed", "age": 31}
+        mylist = []
+        mylist.append(dict1)
+        msg = r'[{"name": "Mohammed", "age": 31}]'
+        self.assertEqual(Base.to_json_string(mylist), msg)
+
 
 if __name__ == "__main__":
     unittest.main()
