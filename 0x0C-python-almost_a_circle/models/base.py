@@ -21,6 +21,9 @@ class Base:
         else:
             self.id = id
 
+    def to_dictionary(self):
+        return self.__dict__
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """static method that returns the JSON str of list of dictionaries
@@ -35,6 +38,11 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """ class method to write a list of obj to a json file
+
+        Args:
+            list_objs (list): the list of obj
+        """
         filename = cls.__name__ + ".json"
 
         if list_objs is None:
@@ -48,3 +56,14 @@ class Base:
             msg = cls.to_json_string(mylist)
             with open(filename, "w") as file:
                 file.write(msg)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """from_json_string turns json string into list of dict
+        Args:
+            json_string (str): the string to be transformed
+        """
+        if not json_string:
+            return []
+        else:
+            return json.loads(json_string)
