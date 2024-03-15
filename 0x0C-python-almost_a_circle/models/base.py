@@ -39,6 +39,7 @@ class Base:
 
         if list_objs is None:
             with open(filename, "w") as file:
+                print("#############################33")
                 file.write("")
 
         else:
