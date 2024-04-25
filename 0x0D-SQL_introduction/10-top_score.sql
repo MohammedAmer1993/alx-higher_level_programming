@@ -1,2 +1,2 @@
 -- show best score
-SELECT score, name from second_table ORDER by score ASC;
+SELECT score, name FROM second_table ORDER BY score ASC;
