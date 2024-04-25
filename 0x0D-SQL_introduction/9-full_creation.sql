@@ -1,5 +1,6 @@
 --creates a table second_table
-
+-- database
+USE hbtn_0c_0;
 -- Create table
 CREATE TABLE IF NOT EXISTS second_table (
     id INT,
