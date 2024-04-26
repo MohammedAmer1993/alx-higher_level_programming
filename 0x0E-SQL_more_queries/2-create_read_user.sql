@@ -1,8 +1,8 @@
--- ADDING USERS AND PRIVILEGES
--- create a new user
--- AGAIN 
-CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
--- GRANT PIVILIGES
-GRANT ALL ON *.* TO 'user_0d_1'@'localhost';
--- FLUSH
+--CREATE A NEW DATABASE
+CREATE DATABASE hbtn_0d_2;
+--CREATE NEW USER 
+CREATE USER IF NOT EXISTS 'user_0d_2'@'loacalhost' IDENTIFIED BY 'user_0d_2_pwd';
+--GRANT SELECT PRIVILEGE
+GRANT SELECT ON hbtn_0d_2.* TO 'user_0d_2'@'loacalhost'
+--FLUSH
 FLUSH PRIVILEGES;
