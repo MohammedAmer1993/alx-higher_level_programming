@@ -1,6 +1,6 @@
 -- select from a table which is a result of a quary
 
-SELECT tv_genres.name as genre, COUNT(tv_show_genres.show_id) as number
+SELECT tv_genres.name AS genre, COUNT(tv_show_genres.show_id) AS number
 FROM tv_genres
 INNER JOIN tv_show_genres
 ON tv_genres.id = tv_show_genres.genre_id
